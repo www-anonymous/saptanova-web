@@ -1,15 +1,15 @@
+
 import Link from "next/link";
 import { Sparkles, Mail, Phone, MapPin } from "lucide-react";
-
+import Logo from "./Logo";
 export default function Footer() {
   return (
     <footer className="bg-[#070e1e] text-slate-400 py-16 border-t border-slate-800">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 pb-12 border-b border-slate-800">
         <div>
-          <div className="flex items-center gap-2 text-white font-bold text-lg mb-4">
-            <Sparkles className="w-5 h-5 text-blue-500" />
-            <span>saptanova</span>
-          </div>
+          <div className="mb-4">
+  <Logo textColor="text-white" subTextColor="text-slate-400" />
+</div>
           <p className="text-sm leading-relaxed max-w-sm">
             Building What&apos;s Next. Crafting high-impact digital solutions for companies worldwide.
           </p>
