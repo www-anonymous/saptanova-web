@@ -21,7 +21,7 @@ export default function WorkPage() {
     <div className="flex flex-col w-full bg-white">
       <section className="hero-glow text-white py-20 px-6">
         <div className="max-w-7xl mx-auto">
-          <span className="text-xs uppercase font-bold tracking-widest text-blue-400">Our Work</span>
+          <span className="text-xs uppercase font-bold tracking-widest text-blue-400">Our Solutions</span>
           <h1 className="text-4xl md:text-5xl font-extrabold mt-3">Ideas. Projects. Impact.</h1>
           <p className="text-slate-300 mt-3 max-w-xl text-sm sm:text-base">
             Explore internal projects and innovation initiatives that showcase our capabilities.
