@@ -21,7 +21,7 @@ export default function Footer() {
             <li><Link href="/" className="hover:text-white transition">Home</Link></li>
             <li><Link href="/about" className="hover:text-white transition">About Us</Link></li>
             <li><Link href="/services" className="hover:text-white transition">Services</Link></li>
-            <li><Link href="/work" className="hover:text-white transition">Our Work</Link></li>
+            <li><Link href="/solutions" className="hover:text-white transition">Solutions</Link></li>
           </ul>
         </div>
 
@@ -29,10 +29,10 @@ export default function Footer() {
           <h4 className="text-white text-sm font-semibold mb-4">Get In Touch</h4>
           <ul className="space-y-3 text-sm">
             <li className="flex items-center gap-3">
-              <Mail className="w-4 h-4 text-blue-500" /> hello@saptanova.com
+              <Mail className="w-4 h-4 text-blue-500" /> reachoutsaptanova@gmail.com
             </li>
             <li className="flex items-center gap-3">
-              <Phone className="w-4 h-4 text-blue-500" /> +91 98765 43210
+              <Phone className="w-4 h-4 text-blue-500" /> +91 7330822048
             </li>
             <li className="flex items-center gap-3">
               <MapPin className="w-4 h-4 text-blue-500" /> Bengaluru, India
@@ -41,7 +41,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="max-w-7xl mx-auto px-6 pt-6 flex flex-col sm:flex-row justify-between text-xs text-slate-500 gap-4">
-        <p>&copy; {new Date().getFullYear()} Saptanova Technologies. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Saptanova Technologies. All rights reserved-2026</p>
         <div className="flex gap-6">
           <Link href="/privacy" className="hover:underline">Privacy Policy</Link>
           <Link href="/terms" className="hover:underline">Terms & Conditions</Link>
