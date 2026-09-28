@@ -36,7 +36,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <div className="text-xs text-slate-400">Email</div>
-                  <div className="font-medium text-slate-800">hello@saptanova.com</div>
+                  <div className="font-medium text-slate-800">tharunofficial.edu@gmail.com</div>
                 </div>
               </div>
 
@@ -46,7 +46,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <div className="text-xs text-slate-400">Phone</div>
-                  <div className="font-medium text-slate-800">+91 98765 43210</div>
+                  <div className="font-medium text-slate-800">+91 7330822048</div>
                 </div>
               </div>
 
