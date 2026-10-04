@@ -9,7 +9,18 @@ export const contentType = "image/png";
 export default function Icon() {
   return new ImageResponse(
     (
-      
+      <div
+        style={{
+          width: "100%",
+          height: "100%",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          background: "#ffffff",
+          borderRadius: "8px",
+          border: "1px solid #e2e8f0",
+        }}
+      >
         <svg
           width="24"
           height="24"
