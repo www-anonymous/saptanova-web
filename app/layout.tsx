@@ -34,6 +34,9 @@ export const metadata: Metadata = {
     title: "Saptanova Technologies",
     description: "Cloud, AI & Custom Enterprise Software Engineering.",
   },
+  verification: {
+    google: "SGUgzXXYBFNlQXCgZOOjrWp2rhXUnbagpHxW-GfWDK8",
+  },
 };
 
 export default function RootLayout({
