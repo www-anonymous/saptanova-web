@@ -37,14 +37,7 @@ export const metadata: Metadata = {
   verification: {
     google: "SGUgzXXYBFNlQXCgZOOjrWp2rhXUnbagpHxW-GfWDK8",
   },
- icons: {
-    icon: [
-      { url: "/favicon.svg", type: "image/svg+xml" },
-      { url: "/icon.svg", type: "image/svg+xml" },
-    ],
-    shortcut: "/favicon.svg",
-    apple: "/favicon.svg",
-  },
+
 };
 
 export default function RootLayout({
