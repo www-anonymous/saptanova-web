@@ -1,6 +1,6 @@
 "use client";
 
-import { Heart, Clock, Award, Users } from "lucide-react";
+import { Heart, Clock, Award, Users, Mail, ArrowRight } from "lucide-react";
 
 const perks = [
   { icon: Heart, title: "Meaningful Work", desc: "Solve real problems with modern technology." },
@@ -10,8 +10,12 @@ const perks = [
 ];
 
 export default function CareersPage() {
+  const mailtoLink =
+    "mailto:reachoutsaptanova@gmail.com?subject=Job%20Application%20-%20Resume%20Submission&body=Hi%20Saptanova%20Team%2C%0D%0A%0D%0AI%20am%20interested%20in%20joining%20Saptanova%20Technologies.%20Please%20find%20my%20resume%20attached.%0D%0A%0D%0AFull%20Name%3A%20%0D%0APhone%20Number%3A%20%0D%0ARole%20of%20Interest%3A%20%0D%0APortfolio%20%2F%20LinkedIn%3A%20%0D%0A%0D%0AThank%20you!";
+
   return (
     <div className="flex flex-col w-full bg-white">
+      {/* Hero */}
       <section className="hero-glow text-white py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <span className="text-xs uppercase font-bold tracking-widest text-blue-400">Careers</span>
@@ -40,18 +44,34 @@ export default function CareersPage() {
           })}
         </div>
 
-        {/* Current Openings */}
-        <div className="mt-16 p-10 rounded-3xl border border-dashed border-slate-300 bg-slate-50/50 flex flex-col items-center text-center">
-          <h3 className="font-bold text-slate-900 text-xl">Current Openings</h3>
-          <p className="text-slate-500 text-sm mt-2 max-w-md">
-            We don&apos;t have any formal positions open right now, but we are always open to great talent. Send us your resume!
+        {/* Resume Submission Box */}
+        <div className="mt-16 p-10 md:p-14 rounded-3xl border border-dashed border-blue-200 bg-blue-50/40 flex flex-col items-center text-center max-w-3xl mx-auto">
+          <div className="w-14 h-14 rounded-2xl bg-blue-600 text-white flex items-center justify-center mb-5 shadow-lg shadow-blue-500/20">
+            <Mail className="w-7 h-7" />
+          </div>
+
+          <h3 className="font-bold text-slate-900 text-2xl">Send Us Your Resume</h3>
+          <p className="text-slate-600 text-sm mt-3 max-w-lg leading-relaxed">
+            Interested in joining our team? Whether you are a software engineer, designer, or cloud architect, send your resume directly to our hiring team.
           </p>
+
           <a
-            href="mailto:careers@saptanova.com"
-            className="mt-6 px-8 py-3 rounded-full bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm transition-all"
+            href={mailtoLink}
+            className="mt-6 inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm transition-all shadow-md shadow-blue-600/30"
           >
-            Send Your Resume &rarr;
+            <span>Send Resume via Email</span>
+            <ArrowRight className="w-4 h-4" />
           </a>
+
+          <p className="text-xs text-slate-500 mt-4">
+            Or mail us directly at:{" "}
+            <a
+              href={mailtoLink}
+              className="font-semibold text-blue-600 underline hover:text-blue-700"
+            >
+              reachoutsaptanova@gmail.com
+            </a>
+          </p>
         </div>
       </section>
     </div>
