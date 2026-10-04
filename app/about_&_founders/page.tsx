@@ -66,11 +66,11 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Leadership Section */}
+      {/* Founders Section */}
       <section className="py-16 bg-slate-50 border-t border-slate-100">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center md:text-left mb-12">
-            <h2 className="text-3xl font-bold text-slate-900">Our Leadership</h2>
+            <h2 className="text-3xl font-bold text-slate-900">Our Founders</h2>
             <p className="text-slate-500 mt-1">Passionate minds driving forward-thinking technology.</p>
           </div>
 
