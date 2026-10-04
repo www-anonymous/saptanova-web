@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: {
-    default: "Saptanova Technologies | Scalable Cloud, AI & Digital Solutions",
+    default: "Saptanova Technologies",
     template: "%s | Saptanova Technologies",
   },
   description:
