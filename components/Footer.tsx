@@ -29,10 +29,10 @@ export default function Footer() {
           <h4 className="text-white text-sm font-semibold mb-4">Get In Touch</h4>
           <ul className="space-y-3 text-sm">
             <li className="flex items-center gap-3">
-              <Mail className="w-4 h-4 text-blue-500" /> reachoutsaptanova@gmail.com
+              <Mail className="w-4 h-4 text-blue-500" /> hello@saptanova.in
             </li>
             <li className="flex items-center gap-3">
-              <Phone className="w-4 h-4 text-blue-500" /> +91 7330822048
+              <Phone className="w-4 h-4 text-blue-500" /> +91-7330822048
             </li>
             <li className="flex items-center gap-3">
               <MapPin className="w-4 h-4 text-blue-500" /> Bengaluru, India

@@ -64,7 +64,7 @@ export default function ContactPage() {
                     href="mailto:tharunofficial.edu@gmail.com" 
                     className="font-medium text-slate-800 hover:text-blue-600 transition-colors"
                   >
-                    reachoutsaptanova@gmail.com
+                    hello@saptanova.in
                   </a>
                 </div>
               </div>
@@ -80,7 +80,7 @@ export default function ContactPage() {
                     href="tel:+917330822048" 
                     className="font-medium text-slate-800 hover:text-blue-600 transition-colors"
                   >
-                    +91 7330822048
+                    +91-7330822048
                   </a>
                 </div>
               </div>
