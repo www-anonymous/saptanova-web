@@ -1,17 +1,42 @@
 @import "tailwindcss";
 
+/* Enable class-based dark mode */
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   --brand-blue: #0066ff;
   --dark-navy: #070e1e;
 }
 
+html {
+  background-color: #ffffff;
+}
+
+html.dark {
+  background-color: #070e1e;
+}
+
 body {
   color: #1e293b;
   background-color: #ffffff;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   overflow-x: hidden;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+html.dark body {
+  color: #f8fafc;
+  background-color: #070e1e;
 }
 
 .hero-glow {
-  background: radial-gradient(circle at 75% 30%, rgba(0, 102, 255, 0.35) 0%, rgba(7, 14, 30, 0.98) 60%), #070e1e;
+  background:
+    radial-gradient(
+      circle at 75% 30%,
+      rgba(0, 102, 255, 0.35) 0%,
+      rgba(7, 14, 30, 0.98) 60%
+    ),
+    #070e1e;
 }

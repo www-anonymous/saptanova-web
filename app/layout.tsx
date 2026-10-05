@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     title: "Saptanova Technologies | Digital Innovation & Enterprise Engineering",
     description:
       "Transforming business capabilities through cloud modernization, custom web platforms, and intelligent automation.",
-    url: "https://saptanova-web.vercel.app",
+    url: "https://www.saptanova.in",
     siteName: "Saptanova Technologies",
     locale: "en_US",
     type: "website",
@@ -37,7 +37,6 @@ export const metadata: Metadata = {
   verification: {
     google: "SGUgzXXYBFNlQXCgZOOjrWp2rhXUnbagpHxW-GfWDK8",
   },
-
 };
 
 export default function RootLayout({
@@ -46,10 +45,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className="min-h-screen flex flex-col bg-white">
+    <html lang="en" suppressHydrationWarning>
+      <body className="min-h-screen flex flex-col bg-white dark:bg-[#070e1e] text-slate-900 dark:text-white transition-colors duration-300">
         <Navbar />
-        <main className="flex-grow">{children}</main>
+
+        <main className="flex-grow">
+          {children}
+        </main>
+
         <Footer />
       </body>
     </html>

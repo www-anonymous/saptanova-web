@@ -1,14 +1,14 @@
 "use client";
 
-import { 
-  HeartPulse, 
-  Landmark, 
-  ShoppingCart, 
-  Truck, 
-  GraduationCap, 
-  Building2, 
-  ArrowRight, 
-  CheckCircle2 
+import {
+  HeartPulse,
+  Landmark,
+  ShoppingCart,
+  Truck,
+  GraduationCap,
+  Building2,
+  ArrowRight,
+  CheckCircle2,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -107,20 +107,25 @@ const industries = [
 
 export default function IndustriesPage() {
   return (
-    <div className="flex flex-col w-full bg-slate-50 min-h-screen">
+    <div className="flex flex-col w-full min-h-screen bg-slate-50 dark:bg-[#070e1e] text-slate-800 dark:text-slate-200 transition-colors duration-300">
+      
       {/* Hero Header */}
-      <section className="bg-slate-900 text-white py-20 px-6 relative overflow-hidden">
+      <section className="bg-slate-900 dark:bg-[#070e1e] text-white py-20 px-6 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 pointer-events-none" />
+
         <div className="max-w-7xl mx-auto relative z-10 text-center md:text-left">
           <span className="text-xs uppercase font-bold tracking-widest text-blue-400">
             Industries We Empower
           </span>
+
           <h1 className="text-4xl md:text-5xl font-extrabold mt-3 tracking-tight">
             Tailored Engineering for Industry Leaders
           </h1>
+
           <p className="mt-4 text-slate-300 max-w-2xl text-base md:text-lg leading-relaxed">
-            Every sector faces distinct challenges and regulations. We design customized,
-            compliant, and future-proof digital architectures built specifically for your domain.
+            Every sector faces distinct challenges and regulations. We design
+            customized, compliant, and future-proof digital architectures
+            built specifically for your domain.
           </p>
         </div>
       </section>
@@ -130,39 +135,47 @@ export default function IndustriesPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {industries.map((ind) => {
             const Icon = ind.icon;
+
             return (
               <div
                 key={ind.title}
-                className="bg-white rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between overflow-hidden group"
+                className="bg-white dark:bg-[#111c30] rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-sm dark:shadow-blue-950/20 hover:shadow-md dark:hover:shadow-blue-950/30 transition-all duration-300 flex flex-col justify-between overflow-hidden group"
               >
                 <div className="p-8">
+                  
                   {/* Top Bar with Icon */}
                   <div className="flex items-center justify-between mb-6">
-                    <div className="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-12 h-12 rounded-xl bg-blue-50 dark:bg-blue-950/50 text-blue-600 dark:text-blue-400 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                       <Icon className="w-6 h-6" />
                     </div>
-                    <span className="text-xs font-semibold uppercase tracking-wider text-slate-400 bg-slate-100 px-3 py-1 rounded-full">
+
+                    <span className="text-xs font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500 bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full">
                       {ind.category}
                     </span>
                   </div>
 
                   {/* Title & Description */}
-                  <h3 className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
+                  <h3 className="text-xl font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                     {ind.title}
                   </h3>
-                  <p className="text-slate-600 text-sm mt-3 leading-relaxed">
+
+                  <p className="text-slate-600 dark:text-slate-400 text-sm mt-3 leading-relaxed">
                     {ind.description}
                   </p>
 
                   {/* Key Capabilities List */}
-                  <div className="mt-6 pt-6 border-t border-slate-100">
-                    <p className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">
+                  <div className="mt-6 pt-6 border-t border-slate-100 dark:border-slate-800">
+                    <p className="text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-3">
                       Core Solutions
                     </p>
+
                     <ul className="space-y-2">
                       {ind.solutions.map((item) => (
-                        <li key={item} className="flex items-start text-xs text-slate-700">
-                          <CheckCircle2 className="w-4 h-4 text-blue-500 mr-2 shrink-0 mt-0.5" />
+                        <li
+                          key={item}
+                          className="flex items-start text-xs text-slate-700 dark:text-slate-300"
+                        >
+                          <CheckCircle2 className="w-4 h-4 text-blue-500 dark:text-blue-400 mr-2 shrink-0 mt-0.5" />
                           <span>{item}</span>
                         </li>
                       ))}
@@ -171,15 +184,20 @@ export default function IndustriesPage() {
                 </div>
 
                 {/* Bottom Impact Banner & Link */}
-                <div className="bg-slate-50 px-8 py-4 border-t border-slate-100 flex items-center justify-between">
-                  <div className="text-xs font-medium text-slate-500">
-                    <strong className="text-slate-800">Impact:</strong> {ind.impact}
+                <div className="bg-slate-50 dark:bg-[#0b1426] px-8 py-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+                  <div className="text-xs font-medium text-slate-500 dark:text-slate-400">
+                    <strong className="text-slate-800 dark:text-slate-200">
+                      Impact:
+                    </strong>{" "}
+                    {ind.impact}
                   </div>
+
                   <Link
                     href="/contact"
-                    className="text-blue-600 hover:text-blue-700 font-semibold text-xs flex items-center gap-1 shrink-0 ml-4 group-hover:translate-x-1 transition-transform"
+                    className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-semibold text-xs flex items-center gap-1 shrink-0 ml-4 group-hover:translate-x-1 transition-transform"
                   >
-                    Discuss <ArrowRight className="w-3.5 h-3.5" />
+                    Discuss
+                    <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
                 </div>
               </div>
@@ -189,23 +207,29 @@ export default function IndustriesPage() {
       </section>
 
       {/* Call to Action Bar */}
-      <section className="bg-white border-t border-slate-200 py-16 px-6">
+      <section className="bg-white dark:bg-[#0b1426] border-t border-slate-200 dark:border-slate-800 py-16 px-6 transition-colors duration-300">
         <div className="max-w-4xl mx-auto text-center space-y-6">
-          <h2 className="text-3xl font-bold text-slate-900">
+          
+          <h2 className="text-3xl font-bold text-slate-900 dark:text-white">
             Don&apos;t see your industry listed?
           </h2>
-          <p className="text-slate-600 text-sm md:text-base leading-relaxed">
-            Our modular engineering frameworks and cloud-native practices adapt to any complex
-            business workflow. Let&apos;s build a custom solution for your specific requirements.
+
+          <p className="text-slate-600 dark:text-slate-400 text-sm md:text-base leading-relaxed">
+            Our modular engineering frameworks and cloud-native practices
+            adapt to any complex business workflow. Let&apos;s build a custom
+            solution for your specific requirements.
           </p>
+
           <div>
             <Link
               href="/contact"
               className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-xl transition duration-200 text-sm shadow-sm"
             >
-              Consult with Our Engineers <ArrowRight className="w-4 h-4" />
+              Consult with Our Engineers
+              <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
+
         </div>
       </section>
     </div>
