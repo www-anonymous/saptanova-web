@@ -43,7 +43,7 @@ const services = [
   },
   {
     icon: ShieldCheck,
-    title: "Salesforce & CRM Solutions",
+    title: "ERP & CRM Solutions",
     desc: "We help you get the most out of Salesforce with custom solutions, integrations, and ongoing support.",
   },
   {
