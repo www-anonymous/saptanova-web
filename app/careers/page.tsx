@@ -27,7 +27,7 @@ const perks = [
 
 export default function CareersPage() {
   const mailtoLink =
-    "mailto:reachoutsaptanova@gmail.com?subject=Job%20Application%20-%20Resume%20Submission&body=Hi%20Saptanova%20Team%2C%0D%0A%0D%0AI%20am%20interested%20in%20joining%20Saptanova%20Technologies.%20Please%20find%20my%20resume%20attached.%0D%0A%0D%0AFull%20Name%3A%20%0D%0APhone%20Number%3A%20%0D%0ARole%20of%20Interest%3A%20%0D%0APortfolio%20%2F%20LinkedIn%3A%20%0D%0A%0D%0AThank%20you!";
+    "mailto:hello@saptanova.in?subject=Job%20Application%20-%20Resume%20Submission&body=Hi%20Saptanova%20Team%2C%0D%0A%0D%0AI%20am%20interested%20in%20joining%20Saptanova%20Technologies.%20Please%20find%20my%20resume%20attached.%0D%0A%0D%0AFull%20Name%3A%20%0D%0APhone%20Number%3A%20%0D%0ARole%20of%20Interest%3A%20%0D%0APortfolio%20%2F%2  LinkedIn%3A%20%0D%0A%0D%0AThank%2  you!";
 
   return (
     <div className="flex flex-col w-full bg-white dark:bg-[#070e1e] text-slate-800 dark:text-slate-200 transition-colors duration-300">
@@ -145,7 +145,7 @@ export default function CareersPage() {
               href={mailtoLink}
               className="font-semibold text-blue-600 dark:text-blue-400 underline hover:text-blue-700 dark:hover:text-blue-300"
             >
-              reachoutsaptanova@gmail.com
+              hello@saptanova.in
             </a>
           </p>
 
