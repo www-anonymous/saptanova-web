@@ -247,17 +247,15 @@ export default function Home() {
                   strokeWidth="1.5"
                   opacity="0.38"
                 />
-                <motion.path
+                <path
                   d="M 100,0 Q 100,100 0,100 Q 100,100 100,200 Q 100,100 200,100 Q 100,100 100,0 Z"
+                  className="star-edge-sweep"
                   fill="none"
                   stroke="#bae6fd"
                   strokeWidth="2.5"
                   strokeLinecap="round"
                   strokeDasharray="42 546"
                   filter="url(#star-edge-glow)"
-                  initial={false}
-                  animate={{ strokeDashoffset: [588, 0], opacity: [0.2, 0.9, 0.2] }}
-                  transition={{ duration: 2.8, repeat: Infinity, repeatDelay: 0.35, ease: "linear" }}
                 />
                 <g transform="translate(124 8) scale(.28)">
                   <motion.path

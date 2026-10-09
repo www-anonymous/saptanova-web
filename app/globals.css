@@ -40,3 +40,38 @@ html.dark body {
     ),
     #070e1e;
 }
+
+.star-edge-sweep {
+  opacity: 0.2;
+  stroke-dashoffset: 588;
+  animation: star-edge-sweep 3.2s linear infinite;
+}
+
+@keyframes star-edge-sweep {
+  0% {
+    stroke-dashoffset: 588;
+    opacity: 0.1;
+  }
+
+  12% {
+    opacity: 0.9;
+  }
+
+  84% {
+    stroke-dashoffset: 0;
+    opacity: 0.8;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 0.1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .star-edge-sweep {
+    animation: none;
+    stroke-dasharray: none;
+    opacity: 0.5;
+  }
+}
