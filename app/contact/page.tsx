@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, ArrowRight, MessageCircle } from "lucide-react";
 
 export default function ContactPage() {
   const [result, setResult] = useState("");
@@ -54,7 +54,20 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-[#070e1e] py-16 px-4 sm:px-6 lg:px-8 text-slate-800 dark:text-slate-200 transition-colors duration-300">
+    <div className="min-h-screen bg-slate-50 dark:bg-[#070e1e] text-slate-800 dark:text-slate-200 transition-colors duration-300">
+
+      <section className="hero-glow text-white px-6 py-16 md:py-20">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-[1fr_auto] gap-8 items-end">
+          <div>
+            <span className="text-xs uppercase font-bold tracking-widest text-blue-300">Contact Saptanova</span>
+            <h1 className="mt-3 text-4xl md:text-5xl font-extrabold">Let&apos;s make your next idea happen.</h1>
+            <p className="mt-4 max-w-2xl text-slate-300 leading-relaxed">Share what you are working on, where you are getting stuck, or what you hope to improve. Our team will help you find a practical next step.</p>
+          </div>
+          <a href="#message" className="inline-flex items-center justify-center gap-2 rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold hover:bg-blue-500 transition-colors">Start a conversation <ArrowRight className="w-4 h-4" /></a>
+        </div>
+      </section>
+
+      <div className="py-14 px-4 sm:px-6 lg:px-8">
 
       <div className="max-w-7xl mx-auto">
 
@@ -72,6 +85,11 @@ export default function ContactPage() {
                 Have a project in mind, a question, or just want to say
                 hello? We&apos;d love to hear from you.
               </p>
+            </div>
+
+            <div className="rounded-2xl bg-blue-50 dark:bg-blue-950/30 border border-blue-100 dark:border-blue-900/60 p-5">
+              <div className="flex items-center gap-2 font-semibold text-slate-900 dark:text-white"><MessageCircle className="w-5 h-5 text-blue-600 dark:text-blue-400" /> A helpful first message</div>
+              <p className="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-400">A little context goes a long way. Tell us about your goals, timeline, and the people who will use the solution.</p>
             </div>
 
             <div className="space-y-6">
@@ -143,7 +161,7 @@ export default function ContactPage() {
           </div>
 
           {/* Right Column: Active Submission Form */}
-          <div className="bg-white dark:bg-[#111c30] p-8 sm:p-10 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm dark:shadow-blue-950/20 transition-colors duration-300">
+          <div id="message" className="bg-white dark:bg-[#111c30] p-8 sm:p-10 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm dark:shadow-blue-950/20 transition-colors duration-300">
 
             <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">
               Send us a message
@@ -269,6 +287,7 @@ export default function ContactPage() {
           </div>
 
         </div>
+      </div>
       </div>
     </div>
   );

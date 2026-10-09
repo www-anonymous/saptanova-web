@@ -1,6 +1,7 @@
 "use client";
 
 import { Heart, Clock, Award, Users, Mail, ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 const perks = [
   {
@@ -26,15 +27,15 @@ const perks = [
 ];
 
 export default function CareersPage() {
-  const mailtoLink =
-    "mailto:hello@saptanova.in?subject=Job%20Application%20-%20Resume%20Submission&body=Hi%20Saptanova%20Team%2C%0D%0A%0D%0AI%20am%20interested%20in%20joining%20Saptanova%20Technologies.%20Please%20find%20my%20resume%20attached.%0D%0A%0D%0AFull%20Name%3A%20%0D%0APhone%20Number%3A%20%0D%0ARole%20of%20Interest%3A%20%0D%0APortfolio%20%2F%2  LinkedIn%3A%20%0D%0A%0D%0AThank%2  you!";
+  const mailtoLink = `mailto:hello@saptanova.in?subject=${encodeURIComponent("Career Application | Saptanova Technologies")}&body=${encodeURIComponent("Hi Saptanova Team,\n\nI am interested in opportunities at Saptanova Technologies. My resume is attached.\n\nFull name: \nPhone: \nRole of interest: \nPortfolio or LinkedIn: \n\nThank you!")}`;
 
   return (
     <div className="flex flex-col w-full bg-white dark:bg-[#070e1e] text-slate-800 dark:text-slate-200 transition-colors duration-300">
 
       {/* Hero */}
       <section className="hero-glow text-white py-20 px-6">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-[1.2fr_.8fr] gap-12 items-center">
+          <div>
 
           <span className="text-xs uppercase font-bold tracking-widest text-blue-400">
             Careers
@@ -45,9 +46,18 @@ export default function CareersPage() {
           </h1>
 
           <p className="text-slate-300 mt-3 max-w-xl text-sm sm:text-base">
-            We&apos;re always on the lookout for talented, passionate people
-            who want to build meaningful technology.
+            Bring your curiosity and craft to a team building useful technology for real business challenges. We value clear thinking, ownership, and people who keep learning.
           </p>
+          <div className="mt-7 flex flex-wrap gap-3">
+            <a href="#apply" className="inline-flex items-center gap-2 rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white hover:bg-blue-500">Share your profile <ArrowRight className="w-4 h-4" /></a>
+            <Link href="/about" className="inline-flex items-center rounded-full border border-slate-600 px-6 py-3 text-sm font-semibold text-white hover:border-blue-400">Meet the team</Link>
+          </div>
+          </div>
+          <div className="rounded-3xl border border-white/10 bg-white/5 p-8">
+            <p className="text-sm font-semibold uppercase tracking-widest text-blue-300">Make an impact</p>
+            <p className="mt-4 text-2xl font-bold text-white">Good work starts with good people.</p>
+            <p className="mt-3 text-sm leading-relaxed text-slate-300">Whether your strength is engineering, design, cloud, or client partnerships, we would like to hear what you can bring to the team.</p>
+          </div>
 
         </div>
       </section>
@@ -55,9 +65,11 @@ export default function CareersPage() {
       {/* Perks */}
       <section className="py-20 max-w-7xl mx-auto px-6">
 
-        <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-8">
-          Why Work With Us?
-        </h2>
+        <div className="max-w-2xl mb-8">
+          <span className="text-xs font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400">The experience</span>
+          <h2 className="text-3xl font-bold text-slate-900 dark:text-white mt-2">Room to do thoughtful work.</h2>
+          <p className="mt-3 text-slate-600 dark:text-slate-400">We aim to create an environment where people can contribute, grow their skills, and see the difference their work makes.</p>
+        </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
@@ -96,7 +108,7 @@ export default function CareersPage() {
         </div>
 
         {/* Resume Submission Box */}
-        <div
+        <div id="apply"
           className="
             mt-16 p-10 md:p-14
             rounded-3xl
@@ -118,9 +130,7 @@ export default function CareersPage() {
           </h3>
 
           <p className="text-slate-600 dark:text-slate-400 text-sm mt-3 max-w-lg leading-relaxed">
-            Interested in joining our team? Whether you are a software
-            engineer, designer, or cloud architect, send your resume directly
-            to our hiring team.
+            Tell us what kind of work you do, what you are excited to learn, and where you could contribute. Attach your resume and include a portfolio or LinkedIn profile if you have one.
           </p>
 
           <a

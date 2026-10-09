@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Eye, Target, Award } from "lucide-react";
+import { Eye, Target, Award, ArrowRight, Mail, Sparkles } from "lucide-react";
 
 const team = [
   {
@@ -11,6 +11,7 @@ const team = [
     image: "/tharun.jpg",
     bio: "Leading Saptanova Technologies with a focus on purposeful innovation, strategic growth, and customer-first execution. With an MBA from JNTUA and experience as an Assistant Professor and HR professional at Capgemini, Tharun is focused on bridging business challenges with modern technology and software engineering.",
     linkedin: "https://www.linkedin.com/in/tharun-s-stark/",
+    email: "tharun@saptanova.in",
   },
   {
     name: "Muktananda Gowd",
@@ -19,6 +20,7 @@ const team = [
     image: null,
     bio: "Driving Saptanova Technologies through strategic marketing, operational excellence, business growth, and strong client relationships. Focused on building a collaborative organization and creating meaningful opportunities for Saptanova and its clients.",
     linkedin: "https://www.linkedin.com/in/umukthanandagowd/",
+    email: "muktha@saptanova.in",
   },
 ];
 
@@ -28,7 +30,8 @@ export default function AboutPage() {
 
       {/* Header */}
       <section className="hero-glow text-white py-20 px-6">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-[1.15fr_.85fr] gap-12 items-center">
+          <div>
           <span className="text-xs uppercase font-bold tracking-widest text-blue-400">
             About Us & Founders
           </span>
@@ -36,6 +39,18 @@ export default function AboutPage() {
           <h1 className="text-4xl md:text-5xl font-extrabold mt-3">
             Who We Are. What We Do. Why It Matters.
           </h1>
+          <p className="mt-5 max-w-2xl text-slate-300 leading-relaxed">
+            We bring business thinking and thoughtful engineering together to help teams move from a challenge to a digital solution they can grow with.
+          </p>
+          <a href="#founders" className="mt-7 inline-flex items-center gap-2 rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white hover:bg-blue-500 transition-colors">
+            Meet the founders <ArrowRight className="w-4 h-4" />
+          </a>
+          </div>
+          <div className="rounded-3xl border border-blue-400/20 bg-blue-500/10 p-8 md:p-10">
+            <Sparkles className="w-8 h-8 text-blue-300" />
+            <p className="mt-5 text-xl md:text-2xl font-semibold leading-relaxed text-white">“Technology should make the next step clearer, simpler, and more achievable.”</p>
+            <p className="mt-4 text-sm text-blue-200">Our approach to every partnership</p>
+          </div>
         </div>
       </section>
 
@@ -56,6 +71,9 @@ export default function AboutPage() {
             Saptanova Technologies was born from a shared passion &mdash; to
             create meaningful technology solutions that help businesses grow,
             evolve, and achieve more.
+          </p>
+          <p className="text-slate-600 dark:text-slate-400 mt-4 leading-relaxed">
+            We work across the full journey: understanding the need, shaping the right approach, building with care, and supporting the people who use the result. Our goal is to make technology practical, dependable, and ready for what comes next.
           </p>
         </div>
 
@@ -105,7 +123,7 @@ export default function AboutPage() {
       </section>
 
       {/* Founders Section */}
-      <section className="py-16 bg-slate-50 dark:bg-[#0b1426] border-t border-slate-100 dark:border-slate-800 transition-colors duration-300">
+      <section id="founders" className="py-16 bg-slate-50 dark:bg-[#0b1426] border-t border-slate-100 dark:border-slate-800 transition-colors duration-300">
 
         <div className="max-w-7xl mx-auto px-6">
 
@@ -166,6 +184,10 @@ export default function AboutPage() {
                 <p className="text-sm text-slate-600 dark:text-slate-400 mt-4 leading-relaxed">
                   {m.bio}
                 </p>
+
+                <a href={`mailto:${m.email}`} className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-blue-600 dark:text-blue-400 hover:underline">
+                  <Mail className="w-4 h-4" /> {m.email}
+                </a>
 
                 {/* LinkedIn */}
                 <a
